@@ -114,7 +114,7 @@ export default function Home() {
             </div>
             <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
               <p className="text-xs text-gray-400 dark:text-gray-500">
-                © 2025 Gravy & Grills. All rights reserved.
+                © 2025 Shree RajRajeshwari. All rights reserved.
               </p>
             </div>
           </div>
