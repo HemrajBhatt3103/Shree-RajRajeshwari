@@ -46,7 +46,7 @@ export function MenuCategory({
       {/* Expanded Menu Items */}
       {isExpanded && (
         <CardContent className="pt-0">
-          <div className="space-y-2 max-h-64 overflow-y-auto">
+          <div className="space-y-2 max-h-64 overflow-y-auto pr-4">
             {items.length > 0 ? (
               items.map((item, index) => (
                 <div key={index} className="flex items-center justify-between py-2 border-b border-gray-100 last:border-b-0">
@@ -65,11 +65,6 @@ export function MenuCategory({
                 </div>
               ))
             )}
-            {itemCount > 5 && (
-              <div className="text-center py-2 text-xs text-gray-500">
-                ... and {itemCount - 5} more items
-              </div>
-            )}
           </div>
         </CardContent>
       )}
@@ -81,7 +76,7 @@ export function MenuCategory({
           size="sm" 
           className={`w-full bg-gradient-to-r ${color} text-white border-0 hover:opacity-90`}
         >
-          View {name}
+          {name}
         </Button>
       </CardContent>
     </Card>

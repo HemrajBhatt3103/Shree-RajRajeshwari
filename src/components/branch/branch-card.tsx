@@ -4,7 +4,7 @@ import { Phone, MapPin } from "lucide-react";
 interface BranchCardProps {
   name: string;
   address: string;
-  phone: string;
+  phone: string | string[];
   mapsUrl: string;
 }
 
@@ -20,12 +20,26 @@ export function BranchCard({ name, address, phone, mapsUrl }: BranchCardProps) {
       <CardContent className="space-y-4">
         <div className="flex items-center gap-2">
           <Phone className="w-4 h-4 text-green-600" />
-          <a 
-            href={`tel:${phone.replace(/[^\d+]/g, '')}`}
-            className="text-green-600 hover:text-green-700 font-medium transition-colors"
-          >
-            {phone}
-          </a>
+          {Array.isArray(phone) ? (
+            <div className="flex flex-col">
+              {phone.map((num, index) => (
+                <a 
+                  key={index}
+                  href={`tel:${num.replace(/[^\d+]/g, '')}`}
+                  className="text-green-600 hover:text-green-700 font-medium transition-colors"
+                >
+                  {num}
+                </a>
+              ))}
+            </div>
+          ) : (
+            <a 
+              href={`tel:${phone.replace(/[^\d+]/g, '')}`}
+              className="text-green-600 hover:text-green-700 font-medium transition-colors"
+            >
+              {phone}
+            </a>
+          )}
         </div>
         <div className="flex items-center gap-2">
           <MapPin className="w-4 h-4 text-blue-600" />

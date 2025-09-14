@@ -16,7 +16,7 @@ const branches = [
   {
     name: "Fatehgunj",
     address: "21, Eastern Society, Near Frigtemp Hot Dog, Fatehgunj Main Road, Vadodara",
-    phone: "84011 89723 / 81539 98890",
+    phone: ["84011 89723", "81539 98890"],
     mapsUrl: "https://maps.google.com/?q=21,+Eastern+Society,+Near+Frigtemp+Hot+Dog,+Fatehgunj+Main+Road,+Vadodara"
   },
   {
@@ -80,12 +80,46 @@ export default function Home() {
             ))}
           </div>
         </div>
-
-        {/* Footer */}
-        <div className="text-center mt-16 text-gray-600">
-          <p className="text-sm">© 2024 Shree Rajrajeshwari Juice & Ice Cream Parlour</p>
-        </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-background dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800 mt-auto">
+        <div className="max-w-4xl mx-auto px-4 py-8">
+          <div className="text-center space-y-4">
+            <div className="space-y-2">
+              <p className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Digital Menu crafted with precision by{' '}
+                <a 
+                  href="https://www.lazlle.studio/"
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-orange-600 hover:text-orange-700 dark:text-orange-400 dark:hover:text-orange-300 transition-colors"
+                >
+                  Lazlle & Co
+                </a>
+              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Professional QR Code Menu Solutions for Restaurants
+              </p>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+              <div className="flex items-center gap-2">
+                <Phone className="w-4 h-4" />
+                <span>9601834906</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <MapPin className="w-4 h-4" />
+                <span>Find us on Google Maps</span>
+              </div>
+            </div>
+            <div className="pt-4 border-t border-gray-200 dark:border-gray-800">
+              <p className="text-xs text-gray-400 dark:text-gray-500">
+                © 2024 Gravy & Grills. All rights reserved.
+              </p>
+            </div>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
