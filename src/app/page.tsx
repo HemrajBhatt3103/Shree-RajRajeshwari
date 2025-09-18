@@ -10,25 +10,21 @@ const branches = [
   {
     name: "Manjalpur",
     address: "Shop No. 8, Amarjyot Shopping Center, Nr. Spandan Circle, Lalbaug Dairy Road, Manjalpur, Vadodara",
-    phone: "70965 92939",
     mapsUrl: "https://maps.google.com/?q=Shop+No.+8,+Amarjyot+Shopping+Center,+Nr.+Spandan+Circle,+Lalbaug+Dairy+Road,+Manjalpur,+Vadodara"
   },
   {
     name: "Fatehgunj",
     address: "21, Eastern Society, Near Frigtemp Hot Dog, Fatehgunj Main Road, Vadodara",
-    phone: ["84011 89723", "81539 98890"],
     mapsUrl: "https://maps.google.com/?q=21,+Eastern+Society,+Near+Frigtemp+Hot+Dog,+Fatehgunj+Main+Road,+Vadodara"
   },
   {
     name: "Nizampura",
     address: "G-4, Vraj Complex, Opp. Gelani Petrol Pump, Nizampura Main Road, Vadodara",
-    phone: "91731 28291",
     mapsUrl: "https://maps.google.com/?q=G-4,+Vraj+Complex,+Opp.+Gelani+Petrol+Pump,+Nizampura+Main+Road,+Vadodara"
   },
   {
     name: "Uma Char Rasta",
     address: "Shop No. 2, Indraprasth Complex, Near Uma Char Rasta, Waghodiya Road, Vadodara",
-    phone: "97738 60510",
     mapsUrl: "https://maps.google.com/?q=Shop+No.+2,+Indraprasth+Complex,+Near+Uma+Char+Rasta,+Waghodiya+Road,+Vadodara"
   }
 ];
@@ -74,7 +70,6 @@ export default function Home() {
                 key={index}
                 name={branch.name}
                 address={branch.address}
-                phone={branch.phone}
                 mapsUrl={branch.mapsUrl}
               />
             ))}
